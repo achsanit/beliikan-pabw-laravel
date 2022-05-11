@@ -30,4 +30,36 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'mailjet' => [
+        'key' => env('MAILJET_APIKEY', '4a2701ff421a6029f99862e547b2826c'),
+        'secret' => env('MAILJET_SECRETKEY', 'ad37b91f0d6d4cb7e39630a245c58e5d'),
+        'transactional' => [
+            'call' => true,
+            'options' => [
+                'url' => 'api.mailjet.com',
+                'version' => 'v3.1',
+                'call' => true,
+                'secured' => true
+            ]
+        ],
+        'common' => [
+            'call' => true,
+            'options' => [
+                'url' => 'api.mailjet.com',
+                'version' => 'v3',
+                'call' => true,
+                'secured' => true
+            ]
+        ],
+        'v4' => [
+            'call' => true,
+            'options' => [
+                'url' => 'api.mailjet.com',
+                'version' => 'v4',
+                'call' => true,
+                'secured' => true
+            ]
+        ],
+    ]
+
 ];

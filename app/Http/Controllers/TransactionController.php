@@ -60,7 +60,7 @@ class TransactionController extends Controller
         ]);
         
         DB::beginTransaction();
-
+        
         $lastId = Transaction::latest('id')->first();
         $getlastId = 0;
 

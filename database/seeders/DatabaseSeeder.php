@@ -21,18 +21,7 @@ class DatabaseSeeder extends Seeder
 
         Product::factory(18)->create();
 
-        Category::create([
-            'name' => 'Ikan'
-        ]);
-        Category::create([
-            'name' => 'Udang'
-        ]);
-        Category::create([
-            'name' => 'Cumi-cumi'
-        ]);
-        Category::create([
-            'name' => 'Kepiting'
-        ]);
+        Category::factory(4)->create();
 
         User::create([
             'name' => 'admin',

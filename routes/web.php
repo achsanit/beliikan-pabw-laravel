@@ -10,6 +10,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\HistoryOrderController;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,11 @@ use App\Http\Controllers\HistoryOrderController;
 */
 
 Route::get('/', [HomeController::class, 'welcome']);
+
+Route::get('email', function() {
+    Mail::to('beerlinn99@gmail.com')->send(new WelcomeMail());
+    return new WelcomeMail();
+});
 
 Route::middleware(['auth'])->group(function () {
 

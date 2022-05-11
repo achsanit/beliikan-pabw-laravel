@@ -208,7 +208,6 @@
 				</div class="">
 				<div><strong> Beliikan | Beli Ikan Segar Mu Disini</strong></div> 
 			</div>
-            
 		</div>
 	</div>
 	<!-- js -->
