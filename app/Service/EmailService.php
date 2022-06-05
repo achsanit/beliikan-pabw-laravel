@@ -54,8 +54,8 @@ class EmailService
         }
     }
 
-    public function mailtrap(User $user, Product $product, Transaction $transaction, DetailTransaction $detailTransaction) 
-    {
-        return Mail::to($user->email)->send(new TransactionMail($user, $product, $transaction, $detailTransaction));
-    }
+    // public function mailtrap(User $user, Product $product, Transaction $transaction, DetailTransaction $detailTransaction) 
+    // {
+    //     return Mail::to($user->email)->send(new TransactionMail($user, $product, $transaction, $detailTransaction));
+    // }
 }

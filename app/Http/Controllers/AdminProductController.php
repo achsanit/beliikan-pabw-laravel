@@ -121,7 +121,7 @@ class AdminProductController extends Controller
 
         $product->update($validatedData);
 
-        return redirect('/admin/addproduct')->with('update', 'Produk Sudah Diupdate...');;
+        return redirect('/admin/addproduct')->with('update', 'Produk Sudah Diupdate...');
     }
 
     /**

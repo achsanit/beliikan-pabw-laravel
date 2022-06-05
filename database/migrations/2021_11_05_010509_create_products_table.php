@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('stock');
             $table->string('img_url')->nullable();
+            $table->foreignId('seller_id');
             $table->timestamps();
         });
     }

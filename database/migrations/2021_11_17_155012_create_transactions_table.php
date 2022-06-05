@@ -15,12 +15,20 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->string('invoice_number');
+            $table->foreignId('user_id');
+            $table->string('name');
             $table->string('address');
             $table->string('email');
             $table->string('no_telp');
+            $table->string('origin_province');
+            $table->string('origin_city');
+            $table->string('destination_province');
+            $table->string('destination_city');
             $table->string('payment_gateway');
             $table->integer('shipping')->default(0);
+            $table->string('service_shipping');
+            $table->string('courier');
             $table->string('total_price');
             $table->string('status')->default('pending');
             $table->timestamps();

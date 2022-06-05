@@ -16,6 +16,7 @@ class CategoryFactory extends Factory
         return [
             //
             'name' => $this->faker->sentence(1, true),
+            'image_url' => $this->faker->image('public/assets/img',200,200,null,false)
         ];
     }
 }

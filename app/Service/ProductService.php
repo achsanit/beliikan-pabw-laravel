@@ -8,13 +8,13 @@ class ProductService
 {
     public function index()
     {
-        $data = Product::with('Category')->latest('id')->paginate(12);
-        return $data;
+        return Product::with('Category')->latest('id');
     }
 
-    public function show()
+    public function show($id)
     {
-        
+        $data = Product::where('id', $id)->with('Category')->first();
+        return $data;
     }
     
 }
