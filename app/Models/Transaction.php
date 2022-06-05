@@ -27,11 +27,17 @@ class Transaction extends Model
         'no_telp',
         'name',
         'invoice_number',
+        'origin_province',
+        'origin_city',
+        'destination_province',
+        'destination_city',
+        'service_shipping',
+        'courier'
     ];
 
-    public function User()
+    public function customer()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Customer::class);
     }
 
     public function detailTransactions()

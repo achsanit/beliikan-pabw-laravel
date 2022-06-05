@@ -15,12 +15,13 @@ class CreateDetailTransactionsTable extends Migration
     {
         Schema::create('detail_transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id');
             $table->foreignId('product_id')->constrained();
             $table->string('name');
             $table->string('category');
             $table->foreignId('transaction_id')->constrained();
             $table->integer('qty');
+            $table->integer('price');
             $table->timestamps();
         });
     }

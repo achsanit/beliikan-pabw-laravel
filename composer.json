@@ -8,7 +8,7 @@
         "php": "^7.3|^8.0",
         "bumbummen99/shoppingcart": "^4.0",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "^7.4",
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
@@ -16,7 +16,8 @@
         "mailjet/laravel-mailjet": "3.0.0",
         "nyholm/psr7": "^1.5",
         "sendinblue/api-v3-sdk": "8.2.1",
-        "symfony/http-client": "^5.4"
+        "symfony/http-client": "^5.4",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

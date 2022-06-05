@@ -16,14 +16,15 @@ class DetailTransaction extends Model
         'category',
         'transaction_id',
         'qty',
+        'price'
     ];
 
-    public function user()
+    public function customer()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Customer::class);
     }
 
-    public function Product()
+    public function product()
     {
         return $this->belongsTo(Product::class);
     }

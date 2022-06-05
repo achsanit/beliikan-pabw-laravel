@@ -21,7 +21,8 @@ class Product extends Model
         'price',
         'description',
         'stock',
-        'img_url'
+        'img_url',
+        'seller_id'
     ];
     public static function getProduct($id)
     {
@@ -36,6 +37,11 @@ class Product extends Model
     public function detailTransactions()
     {
         return $this->hasMany(DetailTransaction::class);
+    }
+
+    public function seller()
+    {
+        return $this->belongsTo(Seller::class);
     }
     
 }
