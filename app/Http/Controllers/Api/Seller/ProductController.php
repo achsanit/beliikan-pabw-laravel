@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Service\Seller\ProductService;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller

@@ -10,8 +10,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\HistoryOrderController;
-use App\Mail\WelcomeMail;
-use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,14 +24,10 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', [HomeController::class, 'welcome']);
 
-Route::get('email', function() {
-    Mail::to('beerlinn99@gmail.com')->send(new WelcomeMail());
-    return new WelcomeMail();
-});
+Route::resource('product', ProductController::class);
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['Auth'])->group(function () {
 
-    Route::resource('product', ProductController::class);
     Route::resource('home', HomeController::class);
     Route::resource('cart', CartController::class);
     Route::resource('transaction', TransactionController::class);
